@@ -5,6 +5,8 @@ List<Post> postFromJson(String str) => List<Post>.from(json.decode(str).map((x) 
 String postToJson(List<Post> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Post {
+
+  
     Post({
         required this.userId,
         required this.id,

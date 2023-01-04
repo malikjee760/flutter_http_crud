@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () async {
                   print('deleting data');
 
-                  deleteUser(1);
+                  deleteUser(5);
                 },
                 child: Text('DeleteData'),
               ),

@@ -1,11 +1,16 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter_http_crud/model/post.dart';
 import 'package:flutter_http_crud/util/const.dart';
 import 'package:http/http.dart' as http;
 
 Future<Post?> getData() async {
-  http.Response response = await http.get(Uri.parse(BASE_URL));
+  http.Response response = await http.get(Uri.parse(BASE_URL),
+  // headers: {
+  //   HttpHeaders.authorizationHeader: 'Basic your_api_token_here',
+  // },
+  );
   print(jsonDecode(response.body));
   return null;
 }
